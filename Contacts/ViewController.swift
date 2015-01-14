@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
     
@@ -124,6 +124,15 @@ class ViewController: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    /**********************
+    UITextField Delegate
+    **********************/
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return false
+    }
     
    }
 
