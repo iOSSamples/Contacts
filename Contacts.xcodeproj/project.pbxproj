@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24BEBFB11A685AE800A92533 /* SyncServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEBFB01A685AE800A92533 /* SyncServer.swift */; };
 		24E0BE231A642C8D003C0738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0BE221A642C8D003C0738 /* AppDelegate.swift */; };
 		24E0BE251A642C8D003C0738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E0BE241A642C8D003C0738 /* ViewController.swift */; };
 		24E0BE281A642C8D003C0738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E0BE261A642C8D003C0738 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24BEBFB01A685AE800A92533 /* SyncServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncServer.swift; path = ../SyncServer.swift; sourceTree = "<group>"; };
 		24E0BE1D1A642C8D003C0738 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E0BE211A642C8D003C0738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E0BE221A642C8D003C0738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		24E0BE1F1A642C8D003C0738 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				24BEBFB01A685AE800A92533 /* SyncServer.swift */,
 				24E0BE221A642C8D003C0738 /* AppDelegate.swift */,
 				24E0BE241A642C8D003C0738 /* ViewController.swift */,
 				24E0BE261A642C8D003C0738 /* Main.storyboard */,
@@ -214,6 +217,7 @@
 			files = (
 				24E0BE251A642C8D003C0738 /* ViewController.swift in Sources */,
 				24E0BE231A642C8D003C0738 /* AppDelegate.swift in Sources */,
+				24BEBFB11A685AE800A92533 /* SyncServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +411,7 @@
 				24E0BE3E1A642C8D003C0738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24E0BE3F1A642C8D003C0738 /* Build configuration list for PBXNativeTarget "ContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				24E0BE411A642C8D003C0738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
