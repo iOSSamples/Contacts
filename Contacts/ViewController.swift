@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, SyncServerDelegate {
 
     @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
     
@@ -118,7 +118,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         alert.addAction(UIAlertAction(title: "Sim",
             style: .Default,
             handler: { _ in
-                        println("Alert - Sim")}
+                        println("Alert - Sim")
+                        let sync = SyncServer()
+                        sync.delegate = self
+                        sync.sendInfo()}
             ))
         
         presentViewController(alert, animated: true, completion: nil)
@@ -134,5 +137,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-   }
+    /**********************
+    SyncServer Delegate
+    **********************/
+    
+    func infoSaved() {
+        
+        //exibe um alerta para o usuario informando que o contato foi gravado com sucesso
+        var actionSheet = UIAlertController (title: "Sucesso", message:"Informação gravada com sucesso!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        actionSheet.addAction(UIAlertAction(
+            title: "OK",
+            style: UIAlertActionStyle.Default,
+            handler: nil))
+        
+        self.presentViewController(actionSheet, animated: true, completion: nil)
+    }
+
+    }
+
+    
+
 
