@@ -103,9 +103,18 @@ class ViewController: UIViewController, UITextFieldDelegate, SyncServerDelegate 
     
     @IBAction func saveContact(sender: AnyObject) {
         
-        var alert = UIAlertController (
+        let gender = self.genderSegmentedControl.selectedSegmentIndex == 0 ? "Fem" : "Masc"
+        
+        let message = "Nome: \(self.nameTextField.text), sexo: \(gender), idade: \(self.ageLabel.text!), Favorito: \(self.favoriteSwitch.on), Forma de Contato: \(self.contactTypeLabel.text!)"
+        
+        /*var alert = UIAlertController (
             title: "Confirmação",
             message: "Deseja realmente gravar o contato?",
+            preferredStyle: .Alert)*/
+
+        var alert = UIAlertController (
+            title: "Confirmação",
+            message: "Deseja realmente gravar o contato? \n\n \(message)",
             preferredStyle: .Alert)
         
         alert.addAction(UIAlertAction(
