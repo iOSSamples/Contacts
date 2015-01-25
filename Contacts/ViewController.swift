@@ -64,6 +64,7 @@ class ViewController: UIViewController, UITextFieldDelegate, SyncServerDelegate 
         println("View fora da tela ou escondida")
     }
     
+    
     /**********************
         Actions
     **********************/
@@ -105,7 +106,7 @@ class ViewController: UIViewController, UITextFieldDelegate, SyncServerDelegate 
         
         let gender = self.genderSegmentedControl.selectedSegmentIndex == 0 ? "Fem" : "Masc"
         
-        let message = "Nome: \(self.nameTextField.text), sexo: \(gender), idade: \(self.ageLabel.text!), Favorito: \(self.favoriteSwitch.on), Forma de Contato: \(self.contactTypeLabel.text!)"
+        let message = "Nome: \(nameTextField.text), sexo: \(gender), idade: \(ageLabel.text!), Favorito: \(favoriteSwitch.on), Forma de Contato: \(contactTypeLabel.text!)"
         
         /*var alert = UIAlertController (
             title: "Confirmação",
