@@ -154,14 +154,17 @@ class ViewController: UIViewController, UITextFieldDelegate, SyncServerDelegate 
     func infoSaved() {
         
         //exibe um alerta para o usuario informando que o contato foi gravado com sucesso
-        var actionSheet = UIAlertController (title: "Sucesso", message:"Informação gravada com sucesso!", preferredStyle: UIAlertControllerStyle.Alert)
+        var alert = UIAlertController (
+                    title: "Sucesso",
+                    message:"Informação gravada com sucesso!",
+                    preferredStyle: .Alert)
         
-        actionSheet.addAction(UIAlertAction(
+        alert.addAction(UIAlertAction(
             title: "OK",
-            style: UIAlertActionStyle.Default,
+            style: .Default,
             handler: nil))
         
-        self.presentViewController(actionSheet, animated: true, completion: nil)
+        presentViewController(alert, animated: true, completion: nil)
     }
 
     }
